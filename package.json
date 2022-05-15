@@ -1,9 +1,11 @@
 {
   "name": "react-native-utility-hooks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "general utility hooks for react native development",
-  "main": "index.ts",
-  "scripts": {},
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MaxHaider/react-native-utility-hooks.git"
@@ -11,9 +13,11 @@
   "keywords": [
     "react-native",
     "utility",
-    "hooks"
+    "hooks",
+    "hook",
+    "async-storage"
   ],
-  "author": "Max Haider",
+  "author": "Max Haider <hello@maxhaider.com> (https://github.com/maxhaider)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MaxHaider/react-native-utility-hooks/issues"
@@ -23,11 +27,20 @@
     "@react-native-async-storage/async-storage": "^1.17.3",
     "@react-native-community/async-storage": "^1.12.1"
   },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "devDependencies": {
+    "@babel/plugin-transform-flow-strip-types": "^7.16.7",
     "@react-navigation/native": "^6.0.10",
+    "@testing-library/react-hooks": "^8.0.0",
+    "@testing-library/react-native": "^9.1.0",
+    "@types/jest": "^27.5.1",
     "@types/react": "^18.0.9",
     "@types/react-native": "^0.67.6",
-    "react": "^17.0.2",
-    "react-native": "^0.68.1"
+    "@types/react-test-renderer": "^18.0.0",
+    "react-test-renderer": "*",
+    "ts-jest": "^28.0.2"
   }
 }
