@@ -8,7 +8,7 @@ Simple hooks for react native
 **Accesses Async Storage**
 This Hook is designed to work with multiple Async "Stores". 
 
-#### Usage
+##### Usage
 ```
 const { store, changeStore, storeLoaded } = useStore<IStoreType>("store-name");
 ```
@@ -32,7 +32,7 @@ const { store, changeStore, storeLoaded } = useStore<IAppSettingsStore>(STORE.AP
 **Measures UI Components**
 The measurement only works if the component you'd like to measure is currently rendered, so it won't work on the first render cycle of your component.
 
-#### Usage
+##### Usage
 
 ```
 const { onLayout, width, height } = useMeasurement();
@@ -50,13 +50,13 @@ return <>
 **Adds correct transform value to styles**
 This hook is very useful if you use svg icon components
 
-#### Usage
+##### Usage
 
 ```
 export const ChevronIcon: FunctionComponent<IIconProps> = (props) => {
   const { orientation, style } = props;
 
-  const svgStyle = useOrientation(orientation, style);
+  const svgStyle = useOrientation(orientation, {style});
 
   return (
     <Svg viewBox="0 0 1000 1000" style={svgStyle} {...rest}>
@@ -64,7 +64,6 @@ export const ChevronIcon: FunctionComponent<IIconProps> = (props) => {
     </Svg>
   );
 };
-
 ```
 
 ## Android Hooks
@@ -73,7 +72,7 @@ export const ChevronIcon: FunctionComponent<IIconProps> = (props) => {
 Can also be used with a custom callback
 Returns goBack (or custom) callback
 
-#### Usage
+##### Usage
 ```
 const goBack = useAndroidBackHandler();
 
