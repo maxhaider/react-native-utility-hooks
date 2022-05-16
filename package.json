@@ -1,6 +1,6 @@
 {
   "name": "react-native-utility-hooks",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "general utility hooks for react native development",
   "main": "src/index.ts",
   "scripts": {
